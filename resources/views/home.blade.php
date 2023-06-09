@@ -14,7 +14,7 @@
                         </div>
                     @endif
                         <div>
-                            <a href="{{ route("vehicle.index") }}">Vehicles</a>
+                            <a href="{{ route("vehicles.index") }}">Vehicles</a>
                         </div>
                         <div>
                             <a href="{{ route("parts.index") }}">Parts</a>

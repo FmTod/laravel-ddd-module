@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Parts;
-use App\Models\Vehicle;
+use App\Modules\Part\Domain\Models\Part;
+use App\Modules\Vehicle\Domain\Models\Vehicle;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -17,7 +17,7 @@ class PartsSeeder extends Seeder
         $vehicles = Vehicle::all();
 
         foreach ($vehicles as $vehicle) {
-            Parts::factory()->count(3)->create([
+            Part::factory()->count(3)->create([
                 'vehicle_id' => $vehicle->id,
             ]);
         }

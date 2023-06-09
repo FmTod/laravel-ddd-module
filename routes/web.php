@@ -17,12 +17,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-// Include the routes for the Vehicle module
-require __DIR__.'/Vehicle/index.php';
-
-// Include the routes for the Parts module
-require __DIR__.'/Parts/index.php';
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+require_once app_path('Modules/Part/UI/Http/Routes/part.php');
+require_once app_path('Modules/Vehicle/UI/Http/Routes/vehicle.php');
